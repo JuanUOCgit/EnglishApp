@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const words =  [
+            {
+             en : "If you look closely",
+             es : "Si te fijas bien"
+            },
+
+            {
+             en : "That's me and that's my masterpiece",
+             es : "Ese soy yo y esa es mi obra maestra"
+            },
+            {
+             en : "Is that your niece?",
+             es : "Es esa tu sobrina?"
+            },
+            {
+             en : "He's about to... ",
+             es : "Esta a punto de... "
+            },
+            {
+             en : "He's about to leave",
+             es : "Esta a punto de salir"
+            },
+            {
+             en : "He's about to get into a taxi",
+             es : "El esta a punto de meterse en un taxi"
+            },
+            {
+             en : "Look at them",
+             es : "Miralos"
+            },
+            {
+             en : "Daycare center",
+             es : "Guarderia"
+            },
+            {
+             en : "Those aren't shoes, they're boots and they're for them",
+             es : "Esos no son zapatos, son botas y son de ellos"
+            },
+            {
+             en : "Although these shoes are half price. They're 50% off",
+             es : "Aunque estos zapatos estan a mitada de precio. Tienen un descuento del 50%"
+            },
+            {
+             en : "What a bargain!",
+             es : "Que chollo!"
+            },
+            {
+             en : "Grumpy",
+             es : "Gruñon"
+            },
+            {
+             en : "I'm a bit tired and jealous of her",
+             es : ""
+            },
+            {
+             en : "It's so unfair",
+             es : "Es tan injusto"
+            },
+            {
+             en : "Shopping list",
+             es : "Lista de la compra"
+            },
+            {
+             en : "Nowadays, is it safe to shop on the Internet?",
+             es : "Hoy en dia, es seguro comprar en Internet?"
+            },
+            {
+             en : "What are the advantages of living in a big city and the desadvantages?",
+             es : "¿Cuales son las ventajas de vivir en un gran ciudad y las desventajas?"
+            },
+            {
+             en : "In fact",
+             es : "De hecho,"
+            },
+            {
+             en : "Congratulations on your engagemment / new baby",
+             es : "Enhorabuena por tu compromiso / bebé"
+            },
+            {
+             en : "I'm so happy for you",
+             es : "Estoy feliz por ti"
+            },
+            {
+             en : "Your brother is good at playing tennis",
+             es : "Tu hermano se le da bien jugar al tennis"
+            },
+            {
+             en : "But he's better at playing the violin",
+             es : "Pero se le da mejor tocar el violin"
+            },
+            {
+             en : "Is she alright? Not really",
+             es : "Ella esta bien? La verdad es que no"
+            },
+            {
+             en : "But she is getting better",
+             es : "Pero ella esta mejorando"
+            },
+            {
+             en : "Juan is sick",
+             es : "Juan esta enfermo"
+            },
+            {
+             en : "I'm on my way to the office",
+             es : "Estoy de camino a la oficina"
+            },
+            {
+             en : "She's feeling much better",
+             es : "Ella se encuentra mucho mejor"
+            },
+            {
+             en : "And she's on her way to work",
+             es : ""
+            },
+            {
+             en : "Send me the report, right now",
+             es : "Enviame el informe, ahora mismo"
+            },
+            {
+             en : "Crowd",
+             es : "Multitud"
+            },
+            {
+             en : "Mount Everest is the highest mountain in the world",
+             es : "El Everest es la montaña más alta del mundo"
+            },
+            {
+             en : "What's the cheapest phone out there?",
+             es : "Cúal es ele telefono más barato en el mercado"
+            },
+            {
+             en : "And what about the most expensive one?",
+             es : "Y el más caro?"
+            },
+            {
+             en : "No one knows",
+             es : "Nadie lo sabe"
+            },
+            {
+             en : "What's the most complicate thing about life",
+             es : "Qué es lo más complicado en la vida"
+            },
+            {
+             en : "and the least complicate thing?",
+             es : "y lo menos complicado"
+            },
+            {
+             en : "Awful",
+             es : "Terrible"
+            },
+            {
+             en : "Life is good (never used 'the' life)",
+             es : ""
+            },
+            {
+             en : "What's the easiest way to get to teather?",
+             es : "Cúal es la manera maás facil de llegar al teatro?"
+            },
+            {
+             en : "Turn right and it's the first shop on the left",
+             es : "Gira a la derecha y la primer tienda a la izquierda"
+            },
+            {
+             en : "border",
+             es : "frontera"
+            },
+            {
+             en : "You support the same team as he does, don't you?",
+             es : "Eres del mismo equipo que el, no?"
+            },
+            {
+             en : "he support Real Madrid",
+             es : "El es del Real Madrid"
+            },
+            {
+             en : "You can read all about it on page 5",
+             es : "Tu puedes leer todo sobre ello en la página 5"
+            },
+            {
+             en : "Signature(signacher)",
+             es : "Firma"
+            },
+            {
+             en : "I don´t have any money. Can I borrow 5 euros and pay you back later?",
+             es : "No tengo dinero. Me prestas 5 euros y te los devuelvo más tarde?"
+            },
+            {
+             en : "Do you have this skirt in red?",
+             es : "Tiene esta falda en rojo?"
+            },
+            {
+             en : "Can I try it/them on?",
+             es : "Puedo probarmela?"
+            },
+            {
+             en : "It's too small",
+             es : "Es demasiado pequeña"
+            },
+            {
+             en : "Costumer service",
+             es : "Atención al cliente"
+            },
+            {
+             en : "I'm too excited, to go to bed now",
+             es : "Estoy demasiado emocionado para ir a la cama"
+            },
+            {
+             en : "I'm not going to try anything on",
+             es : ""
+            },
+            {
+             en : "Tomorrow's going to be so much fun",
+             es : "Mañana va ser muy divertido"
+            },
+            {
+             en : "to make a decision",
+             es : "tomar una decision"
+            },
+            {
+             en : "On average, 9 out of 10 people eat too much",
+             es : "De media, 9 de cada 10 personas comen demasiado"
+            },
+            {
+             en : "There´s too much pollution / traffic",
+             es : "Hay demasiada contaminación / trafico"
+            },
+            {
+             en : "because there're too many cars in the city",
+             es : "porque hay muchos coches en la ciudad"
+            },
+            {
+             en : "Let's take a look",
+             es : "Echa un vistazo"
+            },
+            {
+             en : "He is shy",
+             es : "El es timido"
+            },
+            {
+             en : "People here are lazy",
+             es : "La gente aqui es perezosa"
+            },
+            {
+             en : "Do you know anyone / anybody who's lives in NY?",
+             es : "Conoces alguien que viva en NY?"
+            },
+            {
+             en : "who's interested in applying for this job",
+             es : "que este interesado en solicitar es te trabajo"
+            },
+            {
+             en : "who's afraid of ghosts",
+             es : "que tenga miedo a los fantasmas"
+            },
+            {
+             en : "This knives at 50% off",
+             es : ""
+            },
+            {
+             en : "Is there a discount on these items?",
+             es : ""
+            },
+            {
+             en : "No, there isn't. There're full price",
+             es : "No, no hay. Son a precio normal"
+            },
+            {
+             en : "Don't let me down",
+             es : "No me dejes en la estacada / decepciones /defraudes "
+            },
+            {
+             en : "I hope he doesn't let her down again",
+             es : "Espero que el no le decepcione a ella de nuevo"
+            },
+            {
+             en : "I hope you study a lot",
+             es : "Espero que estudies mucho"
+            },
+            {
+             en : "as usual",
+             es : "como de constumbre"
+            },
+            {
+             en : "jewelry(joulri)",
+             es : "joyeria"
+            },
+            {
+             en : "I'm waiting for Peter / the bus",
+             es : ""
+            },
+            {
+             en : "I'm expecting him to get here any minute now",
+             es : "Yo espero que llegue aqui en cualquier momento"
+            },
+            {
+             en : "wait for upstairs",
+             es : "esperame  arriba"
+            },
+            {
+             en : "I expect you to pay attetion",
+             es : "Espero que pongas atencion"
+            },
+            {
+             en : "I'm going downstairs to buy newspaper",
+             es : "Voy abajo a comprar el periodico"
+            },
+            {
+             en : "to keep an eye on your things / the staff",
+             es : "vigilar tus cosas / el personal"
+            },
+            {
+             en : "Lifeguard keep an eye on the swimmers",
+             es : "El socorrista vigila a los nadadores"
+            },
+            {
+             en : "What's wrong? (NO-NUNCA, what happen)",
+             es : "Que pasa"
+            },
+            {
+             en : "I'm fed up of",
+             es : "Estoy harto de"
+            },
+            {
+             en : "deal with him",
+             es : "tratar con el"
+            },
+            {
+             en : " arguing all the time ",
+             es : " dicutir todo el tiempo"
+            },
+            {
+             en : "The staff here is very friendly",
+             es : "El personal aqui es muy amable"
+            },
+            {
+             en : "",
+             es : ""
+            },
+            {
+             en : "",
+             es : ""
+            },
+            {
+             en : "",
+             es : ""
+            },
+            {
+             en : "",
+             es : ""
+            },
+            {
+             en : "",
+             es : ""
+            },
+            {
+             en : "",
+             es : ""
+            },
+            {
+             en : "",
+             es : ""
+            },
+        ];
+        console.log(words);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
