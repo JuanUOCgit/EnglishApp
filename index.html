@@ -3,7 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>English App</title>
+    <style>
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: black;
+            color:white;
+
+        }
+        div{
+            font-size:3rem;
+            text-align: center;
+            font-weight: bold;
+            padding:20px;
+            height:100px;
+            margin-bottom: 50px;
+        }
+
+        .container{
+            margin-top: 200px;
+        }
+
+        button{
+            font-size: 2rem;
+            width:25%;
+            padding: 10px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 20px;
+            border-radius: 50px;
+        }
+
+        button:hover{
+            background-color: lightslategray;
+            color:white;
+        }
+
+        footer{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container"></div>
+    <div class="resp"></div>
+    <button class="btn1">Check</button>
+    <button class="btn2">Siguiente</button>
+    <footer>
+        <p><b>Created by Juan Estevez Sevilla 2024 - VJE Next</b></p>    
+    </footer>
     <script>
         const words =  [
             {
@@ -516,6 +565,655 @@
              es : "Buscas?"
             },
             {
+             en : "Where else are you going?",
+             es : ""
+            },
+            {
+             en : "What else are you buying?",
+             es : ""
+            },
+            {
+             en : "Who else are you inviting?",
+             es : ""
+            },
+            {
+             en : "She has trouble dealing with her boss",
+             es : "A ella le cuesta tratar con su jefe"
+            },
+            {
+             en : "I deal with a lot of people. I'm very busy",
+             es : "Yo trato con mucha gente. Yo estoy muy ocupado"
+            },
+            {
+             en : "Are you sure?",
+             es : "Estas seguro?"
+            },
+            {
+             en : "The meeting is going to last three a half hours",
+             es : "La reunion va a durar 3 horas y media"
+            },
+            {
+             en : "How long is the course going to last?",
+             es : "Cuanto tiempo va a durar el curso?"
+            },
+            {
+             en : "fully",
+             es : "del todo / pleno / completamente"
+            },
+            {
+             en : "to be safe",
+             es : "esta fuera de peligro"
+            },
+            {
+             en : "He's a right person",
+             es : "El es la persona adecuada"
+            },
+            {
+             en : "Let me give you an example",
+             es : "Te pongo un ejemplo"
+            },
+            {
+             en : "I'm planning to do it after the trip",
+             es : "Pienso (de planificar)"
+            },
+            {
+             en : "I'm planning to move in with my boyfriend at the end of the month",
+             es : "Pienso mudarme con mi novio a final de mes"
+            },
+            {
+             en : "Apologize",
+             es : "Pedir perdon"
+            },
+            {
+             en : "In fact, he is thinking about making a complaint ",
+             es : "De hecho, el está pensando en hacer una reclamacion"
+            },
+            {
+             en : "twice a week",
+             es : "2 veces a la semana"
+            },
+            {
+             en : "They're always complaing. I can't put up with them",
+             es : "Ellos siempre se quejan. Yo no puedo aguantarlos"
+            },
+            {
+             en : "interns",
+             es : "becarios"
+            },
+            {
+             en : "I can't wait any longer",
+             es : "Ya no puedo esperar mas"
+            },
+            {
+             en : "I can't wait to go for a drive / go to the beach",
+             es : "Me muero de ganas de dar una vuelta / irme de vacaciones"
+            },
+            {
+             en : "I'm so excited",
+             es : "Estoy tan emocionado"
+            },
+            {
+             en : "I have got a new car",
+             es : "Tengo un nuevo coche"
+            },
+            {
+             en : "Stop telling me what to do",
+             es : "Deja de decirme lo que tengo que hacer"
+            },
+            {
+             en : "Leave me alone",
+             es : "Dejame en paz"
+            },
+            {
+             en : "Tell me your name",
+             es : "Dime tu nombre"
+            },
+            {
+             en : "Stop doing that",
+             es : "Deja de hacer"
+            },
+            {
+             en : "Make the necesary changes and send it to me",
+             es : "Haz los cambios necesarios y enviamelo"
+            },
+            {
+             en : "Check the figures! Right / straight away!",
+             es : "Comprueba las cifras! Enseguida"
+            },
+            {
+             en : "Come on! Make an effort to come and see me",
+             es : "Venga! haz un esfuerzo para venir y verme"
+            },
+            {
+             en : "Let's take a look",
+             es : "Vamos a verlo"
+            },
+            {
+             en : "Tell them to be quiet, the baby's asleep / sleeping",
+             es : "Diles que esten callados, el bebe esta dormido"
+            }
+            ,
+            {
+             en : "to get the books in the library",
+             es : "conseguir los libros en la bibleoteca"
+            },
+            {
+             en : "Tell her not to throw it away",
+             es : "Dile que no lo tire a la basura"
+            },
+            {
+             en : "Washing machine",
+             es : "Lavadorea"
+            },
+            {
+             en : "I'm not sure we can use it again",
+             es : "No estoy seguro que nosotros lo usemos otravez"
+            },
+            {
+             en : "I'm going to wash the covertible now",
+             es : "Voy a lavar el descapotable ahora"
+            },
+            {
+             en : "but I'll be back later / tarde",
+             es : "Pero volveré mas tarde / tarde"
+            },
+            {
+             en : "Hello, how can I help you?",
+             es : "Hola, como puedo ayudarle?"
+            },
+            {
+             en : "I hate laying / setting the table. tableclock",
+             es : "Odio poner la mesa. Mantel."
+            },
+            {
+             en : "Who's going to pay for this masterpiece?",
+             es : "Quien va a pagar por mi obra maestra?"
+            },
+            {
+             en : "No way",
+             es : "Para nada"
+            },
+            {
+             en : "I won't forget to call John. I promise",
+             es : "No olvidaré llamar a John. Lo prometo."
+            },
+            {
+             en : "This is garbage. It's disgusting",
+             es : "Esto es basura. Es asqueroso"
+            },
+            {
+             en : "What will happen if I don't pass the exam / test?",
+             es : "Que pasará si no paso el examen / test?"
+            },
+            {
+             en : "Who will do it?",
+             es : "Quien lo hará?"
+            },
+            {
+             en : "Enviorement",
+             es : "Medio ambiente"
+            },
+            {
+             en : "I'll probably miss the bus",
+             es : "Probablemente perderé el autobus"
+            },
+            {
+             en : "if I don't leave now",
+             es : "Si no me voy / marcho ahora"
+            },
+            {
+             en : "I'll let you go, if you promise (not) to behave yourself",
+             es : "Te dejaré ir, si prometes (no) comportarte"
+            },
+            {
+             en : "I'll get in touch with him",
+             es : "Me pondré en contacto con el"
+            },
+            {
+             en : "and let him know after the meeting",
+             es : "y le dire algo despues de la reunion"
+            },
+            {
+             en : "What's going on",
+             es : "Que está pasando"
+            },
+            {
+             en : "I can't make up my mind",
+             es : "No puedo decirdirme"
+            },
+            {
+             en : "Let me think about it",
+             es : "Dejame pensarlo"
+            },
+            {
+             en : "and let you know as soon as I can ",
+             es : "y te dire algo en cuanto pueda"
+            },
+            {
+             en : "You can count on me",
+             es : "Puedes contar conmigo"
+            },
+            {
+             en : "I'll back you up whatever happens",
+             es : "Yo te respaldaré pase lo que pase"
+            },
+            {
+             en : "Don't give up ",
+             es : "No te rindas"
+            },
+            {
+             en : "There'll be quite a few people who disagree with you",
+             es : "Habrá bastante gente que no este de acuerdo contigo"
+            },
+            {
+             en : "sevevarl complains",
+             es : "varias quejas"
+            },
+            {
+             en : "Will there be anything to eat at the fair? No there won't",
+             es : "Habrá algo de comer en la feria?"
+            },
+            {
+             en : "to report",
+             es : "informar"
+            },
+            {
+             en : "This time next week, I'll be millionare",
+             es : "A estas alturas de la proxima semana, seré millonario"
+            },
+            {
+             en : "I'll be flying to France on my honey moon",
+             es : "Estaré volnado a Francia de luna de miel"
+            },
+            {
+             en : "Shall I / we get together in half an hour's time?",
+             es : "Nos reunimos en media hora?"
+            },
+            {
+             en : "I think I'll be able to be there first thing in the morning",
+             es : "Pienso / creo que podré estar alli a primera hora de la mañana"
+            },
+            {
+             en : "I'll go to movies(uk) / to the cinema (usa)",
+             es : ""
+            },
+            {
+             en : "Do you feel like tidying this staff up?",
+             es : "Te apetece ordernar/recoger estas cosas"
+            },
+            {
+             en : "Do you feel like going to the beach / taking a walk / an ice cream?",
+             es : "Te apetece ir a la playa / dar un paseo / un helado?"
+            },
+            {
+             en : "filthy",
+             es : "asqueroso"
+            },
+            {
+             en : "Can you please tidy up this staff?",
+             es : "Puedes por favor recoger este chisme o cosa?"
+            },
+            {
+             en : "Are you be able to drive for 6 hours without taking a break?",
+             es : "Eres capaz de conducir 6 horas sin descanso?"
+            },
+            {
+             en : "I live in downtown",
+             es : "Yo vivo en el centro"
+            },
+            {
+             en : "I'm going to take a break",
+             es : "Voy a tomarme un descanso"
+            },
+            {
+             en : "I can't be bothered doing it",
+             es : "No tengo ganas / no me apetece hacerlo"
+            },
+            {
+             en : "I'm afraid. I won't be able to do it / to give a hand later",
+             es : "Me temo. No podré hacerlo / echarte una mano mas tarde"
+            },
+            {
+             en : "to assent the wedding",
+             es : "asistir a la boda"
+            },
+            {
+             en : "Why isn't he in / married / a doctor?",
+             es : "Porue no esta el / casado / doctor?"
+            },
+            {
+             en : "He's away. He is on holiday / on a business trip for a few weeks",
+             es : "El esta fuera. Esta de vacaciones / en un viaje de negocios por unas pocas semanas"
+            },
+            {
+             en : "He's out",
+             es : "El esta de marcha"
+            },
+            {
+             en : "mother in law. Security guard",
+             es : "Suegra. Seguridad"
+            },
+            {
+             en : "Why aren't they familiar with this tecnology the company policy?",
+             es : "Porque no estan familiarizados con la tecnologia de la politica de la empresa?"
+            },
+            {
+             en : "Guidelines",
+             es : "Directrices"
+            },
+            {
+             en : "Family troubles",
+             es : "problemas familiares"
+            },
+            {
+             en : "Why aren't I on the list / on your class?",
+             es : "Porque no estoy en la lista / en tu clase?"
+            },
+            {
+             en : "I'm best by far",
+             es : "Yo estoy mejor con mucha diferencia"
+            },
+            {
+             en : "Humble person",
+             es : "Humilde"
+            },
+            {
+             en : "Why wasn't it where I left it?",
+             es : "Porque no estaba donde lo dejé?"
+            },
+            {
+             en : "It doesn't matter",
+             es : "No importa"
+            },
+            {
+             en : "The dog left the bone outside",
+             es : "El perro dejó el hueso fuera"
+            },
+            {
+             en : "It's time for a break",
+             es : "Es tiempo para un descanso"
+            },
+            {
+             en : "Why don't you slow down",
+             es : "Por que no frenas un poco?"
+            },
+            {
+             en : "You're talking so fast",
+             es : "Hablas muy rapido"
+            },
+            {
+             en : "speed limit",
+             es : "limite de velocidad"
+            },
+            {
+             en : "You're going too fast",
+             es : "Vas demasiado rapido"
+            },
+            {
+             en : "Why won't it be ready?",
+             es : "Porque no estara listo?"
+            },
+            {
+             en : "What a disaster",
+             es : "Que desastre"
+            },
+            {
+             en : "We're running out of patience",
+             es : "Se nos esta acabando la paciencia"
+            },
+            {
+             en : "What are can openes for?",
+             es : "Para que sirve un abre latas?"
+            },
+            {
+             en : "They're for opening can",
+             es : "Para que sirve abrir latas"
+            },
+            {
+             en : "People use them to open cans",
+             es : "Las personas las usan para abrir latas"
+            },
+            {
+             en : "What's it for?",
+             es : "Para que sirve?"
+            },
+            {
+             en : "It doesn't matter. I'll take it",
+             es : "No me importa. Me lo llevaré"
+            },
+            {
+             en : "Portraits",
+             es : "retratos"
+            },
+            {
+             en : "I'm here to teach / to learn",
+             es : "Esoty aqui para enseñar / aprender"
+            },
+            {
+             en : "They weren't  hungry enough to eat another one",
+             es : "Ellos no estaban tan hambrientos para comer otro"
+            },
+            {
+             en : "There was a drop in temperature, due to the bad weather",
+             es : "Habia / hubo una caida / descenso de temperatura, debido al mal tiempo"
+            },
+            {
+             en : "Strike / Resume / pregnant",
+             es : "Huelga / Curriculum / embarazada"
+            },
+            {
+             en : "There wasn't anyone at the meeting, except for a couple of tourits",
+             es : "No hubo / habia nadie en la reunion, salvo un para de turistas"
+            },
+            {
+             en : "There were 20 millions of them / about 4 pairs of shoes, weren't there?",
+             es : "Habia / hubo 20 millones de ellos / mas o menos 4 pares de zapatos, no?"
+            },
+            {
+             en : "There's plenty of food, eat as much as you like / want. Help yourself!",
+             es : "Hay comida de sobrea, come todo lo que quieras. Sirvete!"
+            },
+            {
+             en : "What a pity! / That's too bad! / What a shame!",
+             es : "Que lastima!"
+            },
+            {
+             en : "There aren't as many people as there were the last time",
+             es : "No hay tanta gente como hubo / habia la ultima vez"
+            },
+            {
+             en : "Pepe and Maria break up",
+             es : ""
+            },
+            {
+             en : "There isn't as much water in the south of Europe as in the north",
+             es : "No hay tanta agua en el sur de Europa como en el norte"
+            },
+            {
+             en : "By the way, What was the movie / fair about?",
+             es : "Por cierto, de que va la pelicula / feria?"
+            },
+            {
+             en : "It was about languages school",
+             es : "Iba de escuela de idiomas"
+            },
+            {
+             en : "I couldn't find anywhere to park in the carpark ",
+             es : "No pude encontrar ningun sitio para aparcar en el parking"
+            },
+            {
+             en : "Parking meter / brochure",
+             es : "Parquimetro / folleto"
+            },
+            {
+             en : "Could / may I speak to Mr.Garcia please?",
+             es : "Puedo hablar con Mr.Garcia, por favor?"
+            },
+            {
+             en : "Good morning, this is Juan",
+             es : "Buenos dias, soy Juan"
+            },
+            {
+             en : "I'm calling on behalf of Mr.Lopez",
+             es : "Estoy llamando de parte de Mr.Lopez"
+            },
+            {
+             en : "You should apologize to Juan for what you did",
+             es : "Deberias disculparte / pedir perdon con Juan por lo que hiciste"
+            },
+            {
+             en : "I regret that comment",
+             es : "Me arrepiento por ese comentario"
+            },
+            {
+             en : "You shouldn't eat some chocolates",
+             es : "No deberias comer tantos chocolates"
+            },
+            {
+             en : "he is Tipsy",
+             es : "El esta contentillo"
+            },
+            {
+             en : "They are bad for you",
+             es : "Son malos para ti"
+            },
+            {
+             en : "Junk food",
+             es : "Comida basura"
+            },
+            {
+             en : "I don't think, you should trust him / speak like that to a superior",
+             es : "No creo que deberias confiar en el / hablar de esa manera a un superior "
+            },
+            {
+             en : "When should we hand it / the report in?",
+             es : "Cuando deberias entregarlo / el informe?"
+            },
+            {
+             en : "The deadline's next week",
+             es : "El plazo es la semana que viene"
+            },
+            {
+             en : "How many more do you think we should take a taxi / study more / order?",
+             es : "Cuantos mas piensas crees que piensas "
+            },
+            {
+             en : "We should order 5 pizzas",
+             es : "Deberiamos pedir 5 pizzas"
+            },
+            {
+             en : "offices supplies",
+             es : "material de oficina"
+            },
+            {
+             en : "Maria usually works at work / eat lunch at 3 / go to bed",
+             es : "Maria suele trabajar en el trabajo / come a las 3 / irse a la cama"
+            },
+            {
+             en : "However, yesterday she worked at the head office",
+             es : "Sin embargo, ayer trabajo en la oficina"
+            },
+            {
+             en : "I understand your point of view but I disagred",
+             es : "Entiendo tu punto de vista pero no estoy de acuerdo"
+            },
+            {
+             en : "I didn't set the alarm for 3 AM on purpose",
+             es : "No puse la alarma a las 3 aproposito"
+            },
+            {
+             en : "He didn't forget to make the appointment ",
+             es : "El olvidó concertar la cita"
+            },
+            {
+             en : "date / cavity / dawn / stubborn",
+             es : "cita / carie / amanecer / cabezona"
+            },
+            {
+             en : "We didn't sit at the back / next to the stage",
+             es : "No nos sentamos atras / al lado del escenario"
+            },
+            {
+             en : "We sat at the front / on the bench",
+             es : "Nos sentamos delante / en el banco"
+            },
+            {
+             en : "I didn't do anything wrong",
+             es : "No hice nada malo"
+            },
+            {
+             en : "It's not my fault",
+             es : "No es mi culpa"
+            },
+            {
+             en : "He make me do it",
+             es : "El me obligó a hacerlo"
+            },
+            {
+             en : "We didn't pay for it in cash",
+             es : "No lo pagamos en efectivo"
+            },
+            {
+             en : "We payed for it by credit card",
+             es : "Pagamos con tarjeta"
+            },
+            {
+             en : "ATM (us) / cash point (uk)",
+             es : "cajero"
+            },
+            {
+             en : "Did you remember to do the ironing / to lock the door? No, I didn't",
+             es : "Te acordaste de planchar / cerrar la puerta? No, no lo hice"
+            },
+            {
+             en : "",
+             es : ""
+            },
+            {
+             en : "",
+             es : ""
+            },
+            {
+             en : "",
+             es : ""
+            },
+            {
+             en : "",
+             es : ""
+            },
+            {
+             en : "",
+             es : ""
+            },
+            {
+             en : "",
+             es : ""
+            },
+            {
+             en : "",
+             es : ""
+            },
+            {
+             en : "",
+             es : ""
+            },
+            {
+             en : "",
+             es : ""
+            },
+            {
+             en : "",
+             es : ""
+            },
+            {
+             en : "",
+             es : ""
+            },
+            {
+             en : "",
+             es : ""
+            },
+            {
              en : "",
              es : ""
             },
@@ -549,9 +1247,29 @@
             }
         ];
         console.log(words);
+        console.log(words.length);
+
+        const div = document.querySelector(".container");
+        const resp = document.querySelector(".resp");
+        const btn1 = document.querySelector(".btn1");
+        const btn2 = document.querySelector(".btn2");
+
+        let n = Math.floor(Math.random()*(275-1));
+        div.textContent = words[n].es;
+
+
+        btn1.addEventListener("click",function(){
+            resp.textContent = words[n].en;
+        });
+
+        btn2.addEventListener("click",function(){
+            div.textContent = "";
+            resp.textContent = "";
+            n = Math.floor(Math.random()*(297-1));
+            div.textContent = words[n].es;
+        });
+
+
     </script>
-</head>
-<body>
-    
 </body>
 </html>
